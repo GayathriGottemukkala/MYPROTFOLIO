@@ -15,6 +15,7 @@ import jiomatrimony from "../../img/jiomatrimony.png";
 import unstop from "../../img/blogs.png";
 import ipl from "../../img/ipl.png";
 import bookFound from "../../img/bookfind.png";
+import portfolio from "../../img/portfolio.png";
 
 const Portfolio = () => {
     const projects = [
@@ -27,6 +28,7 @@ const Portfolio = () => {
         { src: Elearning, link: 'https://gammingcart.vercel.app/gaming', text: 'Click to see my project' },
         { src: ipl, link: 'https://ipldashboard-pink.vercel.app/', text: 'Click to see my project' },
         { src: Bookstore, link: 'https://firefly-nine-opal.vercel.app/', text: 'Click to see my project' },
+        { src: portfolio, link: 'https://myportfolio2-chi.vercel.app/', text: 'Click to see my project' },
         
     ];
 
