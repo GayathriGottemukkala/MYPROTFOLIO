@@ -16,6 +16,7 @@ import unstop from "../../img/blogs.png";
 import ipl from "../../img/ipl.png";
 import bookFound from "../../img/bookfind.png";
 import portfolio from "../../img/portfolio.png";
+import streelancer from "../../img/streelancer.png";
 
 const Portfolio = () => {
     const projects = [
@@ -23,6 +24,7 @@ const Portfolio = () => {
         { src: gamming, link: 'https://gammingcart.vercel.app/', text: 'Click to see my project' },
         { src: Weather, link: 'https://firefly-s1gh-gayathris-projects-d17c1cfd.vercel.app/', text: 'Click to see my project' },
         { src: unstop, link: 'https://unstop-blog-app.vercel.app/', text: 'Click to see my project' },
+        { src: streelancer, link: 'https://streelancer-ten.vercel.app/', text: 'Click to see my project' },
         {src:bookFound,link:'https://book-finder-beta-seven.vercel.app/', text: 'Click to see my project' },
         { src: jiomatrimony, link: 'https://jiomatrimony.com/dashboard', text: 'Click to see my project' },
         { src: Elearning, link: 'https://gammingcart.vercel.app/gaming', text: 'Click to see my project' },
