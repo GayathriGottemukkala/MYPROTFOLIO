@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { themeContext } from "../../Context";
+import Resume from '../Services/gayathriresume.pdf';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,28 +37,37 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
+           
             <li>
-              <Link to="services" spy={true} smooth={true} onClick={toggleMenu}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link to="works" spy={true} smooth={true} onClick={toggleMenu}>
+              <Link to="experience" spy={true} smooth={true} onClick={toggleMenu}>
                 Experience
               </Link>
             </li>
             <li>
               <Link to="portfolio" spy={true} smooth={true} onClick={toggleMenu}>
-                Portfolio
+                Projects
               </Link>
             </li>
-            <li>
+              <li>
+              <Link to="certifications" spy={true} smooth={true} onClick={toggleMenu}>
+                Certifications
+              </Link>
+            </li>
+              <li>
+              <Link to="education" spy={true} smooth={true} onClick={toggleMenu}>
+                Education
+              </Link>
+            </li>
+            {/* <li>
               <Link to="testimonial" spy={true} smooth={true} onClick={toggleMenu}>
                 Testimonial
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
+       <a href={Resume} download>
+                          <button className="button n-button">Download CV</button>
+                      </a>
         <Link to="contact" spy={true} smooth={true}>
           <button className="button n-button">Contact</button>
         </Link>
