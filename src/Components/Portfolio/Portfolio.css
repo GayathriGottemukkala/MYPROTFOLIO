@@ -63,3 +63,48 @@
 .swiper-slide:hover .slide-text {
     opacity: 1;
 }
+
+
+.featured-projects {
+ 
+    margin-top: 3rem;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.featured-projects div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.featured-project-card {
+    width: clamp(320px, 80%, 545px);
+  transition: transform 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-project-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.featured-project-card:hover {
+  transform: scale(1.05);
+}
+
+.slide-text {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #444;
+}
+
+
+
+

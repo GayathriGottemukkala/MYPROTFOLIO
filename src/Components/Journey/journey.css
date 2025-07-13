@@ -1,0 +1,72 @@
+.education-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--mainheadfont);
+  margin-bottom: 3rem;
+  color: #f57c00;
+}
+
+.education-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.education-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 1.5rem;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-wrap {
+  background-color: #f57c00;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.edu-info h3 {
+  font-size: var(--subheadfont);
+  margin: 0;
+}
+
+.institution {
+  font-size: var(--parafont);
+  color: #666;
+}
+
+.year {
+  font-size: var(--smallparafont);
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.cgpa {
+  font-size: var(--smallparafont);
+  color: #444;
+  font-style: italic;
+}
+
+
+@media screen and (max-width:570px) {
+    .education-section {
+  padding: 2rem 0.5rem;}
+}

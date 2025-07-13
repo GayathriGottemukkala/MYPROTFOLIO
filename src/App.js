@@ -14,6 +14,8 @@ import { themeContext } from "./Context.jsx";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import JiomatrimonyVideoPage from './Components/jiomatrimony.jsx'; // ✅ Add this file
+import Certifications from './Components/Certificates/certificates.jsx';
+import CareerJourney from './Components/Journey/journey.jsx';
 
 
 function App() {
@@ -40,14 +42,16 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <Intro />
-              <Services />
-              <Experience />
-              <Work />
-              <Portfolio />
-              <Testimonials />
-              <Contact />
-              <Footer />
+             <Intro />
+    <Services />
+    <Portfolio />
+    <Certifications />
+    <Experience />
+    <CareerJourney/>
+    <Work />
+    <Testimonials />
+    <Contact />
+    <Footer />
             </>
           } />
           
