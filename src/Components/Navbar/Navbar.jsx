@@ -6,18 +6,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { themeContext } from "../../Context";
 import Resume from '../Services/gayathriresume.pdf';
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+  const navigate=useNavigate()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className={`n-wrapper ${darkMode ? 'dark' : 'light'}`} id="Navbar">
+    <div className={`n-wrapper ${darkMode ? "dark" : "light"}`} id="Navbar">
       <div className="n-left">
         <div className="n-name">Gayathri</div>
         <Toggle />
@@ -26,35 +28,66 @@ const Navbar = () => {
         <div
           className="hamburger"
           onClick={toggleMenu}
-          style={{ color: darkMode ? 'white' : 'black' }}
+          style={{ color: darkMode ? "white" : "black" }}
         >
           <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x" />
         </div>
-        <div className={`n-list ${isOpen ? "open" : ""} ${darkMode ? 'dark' : 'light'}`}>
+        <div
+          className={`n-list ${isOpen ? "open" : ""} ${
+            darkMode ? "dark" : "light"
+          }`}
+        >
           <ul style={{ listStyleType: "none" }}>
             <li>
-              <Link activeClass="active" to="Navbar" spy={true} smooth={true} onClick={toggleMenu}>
+              <Link
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={() => {
+                  toggleMenu();
+                  navigate("/");
+                }}
+              >
                 Home
               </Link>
             </li>
-           
+
             <li>
-              <Link to="experience" spy={true} smooth={true} onClick={toggleMenu}>
+              <Link
+                to="experience"
+                spy={true}
+                smooth={true}
+                onClick={toggleMenu}
+              >
                 Experience
               </Link>
             </li>
             <li>
-              <Link to="portfolio" spy={true} smooth={true} onClick={toggleMenu}>
+              <Link
+                to="portfolio"
+                spy={true}
+                smooth={true}
+                onClick={toggleMenu}
+              >
                 Projects
               </Link>
             </li>
-              <li>
-              <Link to="certifications" spy={true} smooth={true} onClick={toggleMenu}>
+            <li>
+              <Link
+                to="certifications"
+                spy={true}
+                smooth={true}
+                onClick={toggleMenu}
+              >
                 Certifications
               </Link>
             </li>
-              <li>
-              <Link to="education" spy={true} smooth={true} onClick={toggleMenu}>
+            <li>
+              <Link
+                to="education"
+                spy={true}
+                smooth={true}
+                onClick={toggleMenu}
+              >
                 Education
               </Link>
             </li>
@@ -65,9 +98,9 @@ const Navbar = () => {
             </li> */}
           </ul>
         </div>
-       <a href={Resume} download>
-                          <button className="button n-button">Download CV</button>
-                      </a>
+        <a href={Resume} download>
+          <button className="button n-button">Download CV</button>
+        </a>
         <Link to="contact" spy={true} smooth={true}>
           <button className="button n-button">Contact</button>
         </Link>
